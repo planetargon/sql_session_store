@@ -4,11 +4,11 @@ This version of SqlSessionStore properly supports both CGI-based sessions (Rails
 and Rack-based sessions released in Rails 2.3.  For the latest version of +SqlSessionStore+,
 see:
 
-    http://github.com/nateware/sql_session_store/tree/master
+    http://github.com/planetargon/sql_session_store/tree/master
 
 To install, use:
 
-    script/plugin install git://github.com/nateware/sql_session_store.git
+    script/plugin install git://github.com/planetargon/sql_session_store.git
 
 This version also includes the "native columns" feature, which enables +session[:xyz]+
 to map directly to column +xyz+ in the sessions table transparently.  For info,
@@ -64,7 +64,7 @@ environment.rb:
 
 == Step 4 (optional)
 
-If you want to store certain pieces of data as actual columns in the 
+If you want to store certain pieces of data as actual columns in the
 +sessions+ table transparently, simply update the sessions migration
 to include the columns.  For example, if you wanted to store +user_id+
 and +language+ as columns, your migration might look something like:
