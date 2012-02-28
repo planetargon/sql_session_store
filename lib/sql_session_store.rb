@@ -119,9 +119,14 @@ class SqlSessionStore < ActionController::Session::AbstractStore
       @session.update_session(@data)
     end
   end
-  
+
   def id
     @session.id
+  end
+
+  private
+  def destroy(env)
+    @session.destroy if @session
   end
 end
 
